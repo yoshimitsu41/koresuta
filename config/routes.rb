@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :stores
   devise_for :users
   get 'users/:id' => 'users#show'
   root "activities#index"
