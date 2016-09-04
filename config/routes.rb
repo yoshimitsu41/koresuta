@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  # root "activitys#index"
+  devise_for :users
+  get 'users/:id' => 'users#show'
+  root "activities#index"
   resources :activities
 end
