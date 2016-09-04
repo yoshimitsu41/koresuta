@@ -1,0 +1,12 @@
+<h2>アクティビティ一覧</h2>
+
+<%= link_to '一覧', activities_path %>
+<%= link_to '新規作成', new_activity_path %>
+
+<% @activities.each do |activity| %>
+<h3><%= activity.title %></h3>
+<p><%= activity.description %></p>
+<p><%= activity.price %></p>
+<%= link_to '詳細を見る', activity_path(activity) %>
+<hr>
+<% end %>
