@@ -10,17 +10,6 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 
 <script>
-$(document).ready(function(){
-$('.bxslider').bxSlider({
-  pager:false,
-  controls:false,
- mode: 'fade',
- auto: 'true',
- speed:'8000'
-});
-});
-</script>
-<script>
 $(function(){
     var $setText = $('.postitle');
     var cutFigure = '28'; // 表示する文字数の設定
@@ -147,6 +136,18 @@ $(function() {
 
 
 <% if current_page?(root_path) %>
+<script>
+$(document).ready(function(){
+$('.bxslider').bxSlider({
+  pager:false,
+  controls:false,
+ mode: 'fade',
+ auto: 'true',
+ speed:'8000'
+});
+});
+</script>
+
 <!-- メイン画像 -->
 <div id="mainImage">
 <div class="inner">
@@ -180,5 +181,115 @@ $(function() {
 </div>
 
 
+<p id="page-top"><a href="#wrap"><i class="fa3 fa-chevron-up" aria-hidden="true"></i>
+</a></p>
+
+<!-- フッター上部 -->
+<div id="footerUpper">
+  <div class="inner">
+    <div class="sns">
+    <%= image_tag("sns.jpg") %>
+    <div class="snsmozi">コレスタ公式SNSに「いいね！」して、最新の体験をチェックしよう！</div>
+<div class="buttons-sns"><div class="fb-like" data-href="https://www.facebook.com/GH.GreenHill/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></div>
+
+    <div class="buttons-sns"><a href="https://twitter.com/chokokano" class="twitter-follow-button" data-show-count="false">Follow @chokokano</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+</div>
+
+<div class="ftmenu">
+  <h2>About-</h2>
+    <div class="menulist">
+      <a href="">初めての方へ</a>
+      <a href="">広告掲載について</a>
+      <a href="">利用規約</a>
+      <a href="">プライバシーポリシー</a>
+      <a href="">お問い合わせ</a>
+      <a href="">運営会社</a>
+      <%= link_to "店舗様ログイン", new_store_session_path %>
+    </div>
+</div>
+
+  </div>
+</div>
+<!-- / フッター上部 -->
+
+<div id="footerLower">
+   <div class="inner">
+   <%= link_to image_tag("logoft.png"), root_path %>
+  <address>Copyright&copy; <span class="nonesp">日本最大級のレジャー・体験・レッスン予約サイト </span>コレ☆スタ © 2016 GreenHill</address>
+    </div>
+</div>
+
+</div>
+
+<div class="sb-slidebar sb-right">
+<p class="sb-toggle-right">
+        <span class="modoru"><i class="fa fa-reply" aria-hidden="true"></i>
+戻る</span>
+    </p>
+    <div class="backsearch">
+    <form action="/" name="search2" method="post">
+  <dl class="search2">
+    <dt><input type="text" name="search" value="" placeholder="フリーワード検索（例：バンジージャンプ）" /></dt>
+    <dd><button>検索</button></dd>
+  </dl>
+</form>
+</div>
+<div class="backarea">
+<div class="login"><i class="fa fa-sign-in" aria-hidden="true"></i>
+ログイン</div>
+<div class="newlog"><i class="fa fa-user" aria-hidden="true"></i> 会員登録</div>
+<div class="mysta"><i class="fa fa-bookmark" aria-hidden="true"></i>
+マイスタ</div>
+<h2>全国の「体験」を探す</h2>
+    <ul>
+        <li>エリアから探す</li>
+        <li>カテゴリーから探す</li>
+        <li>人気順から探す</li>
+        <li>駅から探す</li>
+    </ul>
+  <h2>About</h2>
+    <ul><li>初めての方へ</li>
+        <li>広告掲載について</li>
+        <li>利用規約</li>
+        <li>プライバシーポリシー</li>
+        <li>お問い合わせ</li>
+        <li>運営会社</li>
+        <li>店舗様ログイン</li>
+    </ul>  
+
+
+    </div>
+</div>
+<script src="jquery.autopager-1.0.0.js"></script>
+<script>
+  //  最大ページ数取得
+  var maxpage = <?php echo $wp_query->max_num_pages; ?>;
+ 
+$('#loading').css('display', 'none');
+$.autopager({
+    content: '#article',// 読み込むコンテンツ
+    link: '#next a', // 次ページへのリンク
+    autoLoad: false,// スクロールの自動読込み解除
+ 
+    start: function(current, next){
+      $('#loading').css('display', 'block');
+      $('#next a').css('display', 'none');
+    },
+ 
+    load: function(current, next){
+        $('#loading').css('display', 'none');
+        $('#next a').css('display', 'block');
+        if( current.page >= maxpage ){ //最後のページ
+            $('#next a').hide(); //次ページのリンクを隠す
+        }
+    }
+});
+ 
+$('#next a').click(function(){ // 次ページへのリンクボタン
+    $.autopager('load'); // 次ページを読み込む
+    return false;
+});
+</script>
 </body>
 </html>
