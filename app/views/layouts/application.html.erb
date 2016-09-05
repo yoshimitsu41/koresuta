@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 
 <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 
 <script>
 $(document).ready(function(){
@@ -120,13 +120,22 @@ $(function() {
 <div class="inner">
   <h1></h1>
   <!-- ロゴ -->
-  <h2><%= image_tag("logo.png") %></h2>
+  <h2><%= link_to image_tag("logo.png"), root_path %></h2>
   <!-- / ロゴ -->
+
+
+
 
 <div class="nav">
 <ul>
-  <li><a class="btncol_01 button01"href="">会員登録</a></li>
-  <li><a class="btncol_02 button01"href="">ログイン</a></li>
+<% if user_signed_in? %>
+  <li><%= link_to "ログアウト", destroy_user_session_path, :class => "btncol_02 button01", method: :delete %></li>
+  <li><%= link_to "#{current_user.id}", "users/#{current_user.id}" %>様</li>
+<% else %>
+  <li><%= link_to "新規登録", new_user_registration_path, :class => "btncol_01 button01" %></li>
+  <li><%= link_to "ログイン", new_user_session_path, :class => "btncol_02 button01" %></li>
+<% end %>
+
   <li class="nonesp"><a href=""><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> 初めての方へ</a></li>
   <li class="nonesp"><a href=""><i class="fa fa-heart"></i> マイスタ（お気に入り）</a></li>
   <li class="nonesp"><a href="">カテゴリーから探す</a></li>
@@ -153,10 +162,19 @@ $(function() {
 </div>
 <!-- / メイン画像 -->
 <% end %>
+
 <!-- / ヘッダー -->
 
 <!-- メインコンテンツ -->
 <div id="container">
+<% if current_page?(root_path) %>
+  <div class="koresuta">
+  <h2>コレスタって？</h2>
+  コレスタは「コレから何かをスタート」したい方に向けたあらゆる「体験」を集約したサイトです。<br />
+  新しい「遊び」「レジャー」「レッスン」「学習」などきっとあなたのスタートにマッチした「体験」がここにはあります。
+  </div>
+<% end %>
+
 <%= yield %>
 
 </div>

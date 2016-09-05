@@ -1,4 +1,6 @@
-<h2>アクティビティ一覧</h2>
+<div class="post hover01">
+<h2><i class="fa fa-star" aria-hidden="true"></i>新着のレジャー・遊び・レッスン・学習</h2>
+
   <% if user_signed_in? %>
     <p><%= link_to "#{current_user.email}", "users/#{current_user.id}" %>でログイン中</p>
     <%= link_to "ログアウト", destroy_user_session_path, method: :delete  %>
@@ -28,3 +30,5 @@
 <p><%= link_to "店舗ログイン", new_store_session_path %></p>
 <p><%= link_to "店舗新規登録", new_store_registration_path %></p>
 <% end %>
+
+</div>
