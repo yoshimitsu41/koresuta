@@ -9,6 +9,7 @@ class ActivitiesController < ApplicationController
 
   def new
     @activity = Activity.new
+    @activity.activity_images.build
   end
 
   def create
@@ -26,6 +27,10 @@ class ActivitiesController < ApplicationController
 
   private
   def activity_params
-    params.require(:activity).permit(:title,:description,:price)
+    params.require(:activity).permit(:title,:description,:price,activity_images_attributes: [:image])
+  end
+
+  def activityimage_params
+    params.require(:activity_image).permit(:image)
   end
 end

@@ -1,3 +1,4 @@
 class ActivityImage < ActiveRecord::Base
-  birongs_to: activity
+  belongs_to :activity
+  mount_uploader :image, ImageUploader
 end

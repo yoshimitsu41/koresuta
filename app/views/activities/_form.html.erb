@@ -4,5 +4,8 @@
   <%= f.text_field :title, placeholder: "タイトル" %>
   <%= f.text_area :description, placeholder: "説明文"  %>
   <%= f.number_field :price, placeholder: "料金" %>
+      <%= f.fields_for :activity_images do |image| %>
+        <%= image.file_field :image %>
+      <% end %>
   <%= f.submit '登録' %>
 <% end %>
