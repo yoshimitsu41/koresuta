@@ -15,7 +15,7 @@
 
 
 <% if store_signed_in? %>
-<p><%= link_to "#{current_store.email}", "stores/#{current_store.id}" %>でログイン中</p>
+<p><%= link_to "#{current_store.store_name}", "/stores/#{current_store.id}" %>でログイン中</p>
 <p><%= link_to "店舗ログアウト", destroy_store_session_path, method: :delete %></p>
 <% else %>
 <p><%= link_to "店舗ログイン", new_store_session_path %></p>

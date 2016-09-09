@@ -6,4 +6,9 @@
     <li>担当者名：</li>
   </ul>
 
+  <h2>登録しているアクティビティ</h2>
+  <% @activities.each do |activity| %>
+    <p><%= link_to "#{activity.title}","/activities/#{activity.id}" %></p>
+  <% end %>
+
 <%= link_to 'トップへ戻る', '/' %>
