@@ -119,7 +119,7 @@ $(function() {
 <ul>
 <% if user_signed_in? %>
   <li><%= link_to "ログアウト", destroy_user_session_path, :class => "btncol_02 button01", method: :delete %></li>
-  <li><%= link_to "#{current_user.id}", "users/#{current_user.id}" %>様</li>
+  <li><%= link_to "#{current_user.nickname}", "/users/#{current_user.id}" %>様</li>
 <% else %>
   <li><%= link_to "新規登録", new_user_registration_path, :class => "btncol_01 button01" %></li>
   <li><%= link_to "ログイン", new_user_session_path, :class => "btncol_02 button01" %></li>
