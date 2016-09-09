@@ -205,7 +205,9 @@ $('.bxslider').bxSlider({
       <a href="">プライバシーポリシー</a>
       <a href="">お問い合わせ</a>
       <a href="">運営会社</a>
-      <%= link_to "店舗様ログイン", new_store_session_path %>
+      <% unless user_signed_in? %>
+        <%= link_to "店舗様ログイン", new_store_session_path %>
+      <% end %>
     </div>
 </div>
 
