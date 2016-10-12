@@ -282,7 +282,8 @@ dl.search2 dd button{
 	text-align:center;
 	background-color:#FF4355;
 	border:none;
-	
+	padding:0;
+	font-size:3.5vw;
 	-webkit-border-radius:6px;
 	-moz-border-radius:6px;
 	-o-border-radius:6px;

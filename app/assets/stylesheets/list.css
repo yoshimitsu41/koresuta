@@ -160,6 +160,341 @@ border-bottom:1px solid #f1f1f1;
 .listcalendar ul li:last-child{
 	width:75.5px;
 }
+
+/* 店舗詳細ページ */
+.listin{
+	overflow:hidden;
+	padding:0 0 40px 0;
+
+}
+.listin h2{
+	font-size:1.6rem;
+}
+.listin h2 .okiniiri{
+	float:right;
+	font-size:0.7rem;
+	background:#f1f1f1;
+	border-radius: 4px;
+    box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.08) inset;
+    text-align: center;
+	padding:10px;
+}
+.sns{
+	display:block;
+	float:right;
+	margin-bottom:10px;
+}
+
+/* ------------------------------
+   タブ
+------------------------------ */
+.tabAccordion {
+    margin: 0 auto;
+    width:100%;
+	
+	overflow:hidden;
+    position: relative;
+}
+.tabAccordion a .fa{
+	color:#222222;
+	 -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.tabAccordion a:hover .fa{
+	color:#fff;
+}
+.tabAccordion dl {
+    top: 0;
+    left: 0;
+    width: 600px;
+  
+}
+ 
+.tabAccordion dl dt {
+    top: 0;
+    left: 0;
+    width: 150px;
+    font-weight: bold;
+    position: absolute;
+    border-right: #fff 1px solid;
+    background: #E8F5F4;
+    box-sizing: border-box;
+	color:#FFF;
+	border-top:3px solid #1E9A8F;
+}
+ 
+.tabAccordion dl:nth-child(2) dt {
+    left: 150px;
+}
+ 
+.tabAccordion dl:nth-child(3) dt {
+    left: 300px;
+}
+ 
+.tabAccordion dl:nth-child(4) dt {
+    left: 450px;
+}
+.tabAccordion dl:nth-child(5) dt {
+    left: 450px;
+    border-right: none;
+}
+.tabAccordion dl dt a {
+    padding: 15px 0;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+	
+}
+ 
+.tabAccordion dl dt.btnAcv {
+	color:#333;
+    border-bottom: none;
+    background: #fff;
+	
+	box-sizing:border-box;
+	
+}
+ 
+
+    .tabAccordion dl dt:hover > a {
+        background: #1E9A8F;
+		color:#fff;
+		text-decoration:none;
+    }
+
+ 
+.tabAccordion dl dd {
+    padding: 80px 0px;
+	min-height:600px;
+    width: 810px;
+    text-align: left;
+	overflow:hidden;
+    display: none;
+    box-sizing: border-box;
+}
+ 
+.tabAccordion dl dd p {
+   
+}
+ 
+
+    .tabAccordion {
+        width: 100%;
+        box-sizing: border-box;
+    }
+ 
+    .tabAccordion dl {
+        width: 100%;
+        box-sizing: border-box;
+    }
+ 
+    .tabAccordion dl dt {
+        width: 20%;
+    }
+ 
+    .tabAccordion dl:nth-child(2) dt {
+        left: 20%;
+    }
+ 
+    .tabAccordion dl:nth-child(3) dt {
+        left: 40%;
+    }
+ 
+    .tabAccordion dl:nth-child(4) dt {
+        left: 60%;
+    }
+.tabAccordion dl:nth-child(5) dt {
+        left: 80%;
+    }
+
+.tabAccordion h3{
+	padding: 12px 15px;
+	background-color: #f1f1f1;
+	border-left: 6px solid #1e9a8f;
+	margin-bottom:20px;
+}
+.tabAccordion .st{
+	display:block;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+.tabAccordion p{
+	margin-bottom:20px;
+	font-size:15px;
+}
+
+.slider {
+    width:810px;
+    height:450px;
+    overflow: hidden;   /*追加*/
+}
+.slider img{
+	width:100%;
+}
+/* ------------------------------
+   フォト＆動画
+------------------------------ */
+.gallery{
+	width:810px;
+}
+.mosaicflow__column {
+  float:left;
+   width:33.3%;
+  
+}
+.mosaicflow__item {
+  position:relative;
+ 
+}
+.mosaicflow__item img {
+  display:block;
+  width:100%;
+  
+  height:auto;
+}
+
+.mosaicflow__item p {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  margin:0;
+  padding:10px;
+  background:hsla(0,0%,0%,.5);
+  color:#fff;
+  opacity:0;
+  box-sizing:border-box;
+  font-size:10px;
+}
+.mosaicflow__item:hover p {
+  opacity:1;
+}
+
+/* ------------------------------
+   口コミ
+------------------------------ */
+.reviews{
+	overflow:hidden;
+	
+}
+.reviews ul li{
+	float:left;
+	width:
+	
+}
+
+/* ------------------------------
+   右予約サイド
+------------------------------ */
+.reservation{
+	position:absolute;
+	right:0;
+	top:80px;
+	width:270px;
+	overflow:hidden;
+	height:600px;
+	box-sizing:border-box;
+}
+.reservationbtn a{
+	display:block;
+	width:100%;
+	font-size:1.0rem;
+	font-weight:bold;
+	background:#FF4355;
+	border-radius: 4px;
+    box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.08) inset;
+    text-align: center;
+	padding:10px;
+	box-sizing:border-box;
+	color:#FFF;
+}
+.reservationbtn a .fa{
+	color:#FFF;
+}
+.reservationbtn a:hover{
+	opacity:0.8;
+	text-decoration:none;
+}
+.listinprice{
+	display:inline-block;
+	font-weight:bold;
+	font-size:1.5rem;
+	letter-spacing:0.1rem;
+	font-family: "Quicksand","游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	font-style:oblique;
+	margin-left:5px;
+	color:#FF4355;
+}
+.reservation table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.reservation th {
+	text-align:left;
+    padding: 0 0 20px 0;
+    width: 30%;
+}
+.reservation td {
+    padding: 0 0 20px 0;
+    text-align: left;
+}
+/* カレンダー */
+.listincalendar{
+	display:block;
+	margin-bottom:5px;
+	overflow:hidden;
+	margin-top:20px;
+}
+.listincalendar .month{
+	display:block;
+	text-align:center;
+}
+.listincalendarbody{
+	background-color: #fff;
+    font-size: 14px;
+    table-layout: fixed;
+    width: 100%;
+}
+.listincalendarbod colgroup.sunday {
+    background-color: #fce6e1;
+}
+
+.listincalendar ul {
+	overflow:hidden;
+}
+.listincalendar ul li{
+	background:#fff;
+	float:left;
+	width:15%;
+	box-sizing:border-box;
+	font-size:75%;
+	text-align:center;
+	overflow:hidden;
+	padding:1px;
+	border-right:1px solid #ccc;
+	border-top:1px solid #ccc;
+	font-weight:bold;
+	border-bottom:1px solid #ccc;
+}
+.listincalendar ul li:first-child{
+	border-left:1px solid #ccc;
+}
+.listincalendar ul li:last-child{
+	width:10%;
+}
+.listincalendar p{
+	padding:0 0 0 2px;
+	display:block;
+	font-size:0.8rem;
+}
+.listincalendar p .fa{
+	color:#333;
+}
 }
 /*===============================================
 画面の横幅が640pxまで
@@ -167,13 +502,10 @@ border-bottom:1px solid #f1f1f1;
 
 @media screen and (max-width: 640px){
 .pankuzu{
-	padding:50px 10px 0 10px;
+	padding:55px 10px 5px 10px;
 	box-sizing:border-box;
 	width:100%;
 	background:#f1f1f1;
-	line-height:30px;
-	text-overflow: ellipsis;
-    white-space: nowrap;
 }
 .pankuzu a{
 	color:#1C998F;
@@ -186,4 +518,480 @@ border-bottom:1px solid #f1f1f1;
 	margin:0 8px;
 	color:#333;
 }
+.fa-angle-right{
+	margin:0 8px;
+	color:#333;
+}
+.listmain {
+	position:relative;
+	overflow:hidden;
+	margin-bottom:20px;
+}
+.listmain img{
+	width:100%;
+	margin-bottom:20px;
+}
+.listmain h2{
+	position:absolute;
+	color:#FFF;
+	z-index:1;
+	top:25%;
+	left:10px;
+	font-size:5.5vw;
+	text-shadow: 1px 1px 3px #000;
+}
+.listmain p{
+	padding:0 10px;
+	box-sizing:border-box;
+}
+.list {
+	overflow:hidden;
+}
+.list h2{
+	background:#f1f1f1;
+	padding:10px 10px;
+	border-radius: 5px;
+}
+.list ul{
+	padding:0 10px;
+	box-sizing:border-box;
+}
+.list ul li:first-child{
+	padding-top:20px;
+}
+.list ul li{
+	display:block;
+	padding:20px 0;
+	border-bottom:1px solid #f1f1f1;
+
+	overflow:hidden;
+	position:relative;
+}
+.list ul li img{
+	display:inline-block;
+	width:40%;
+	float:left;
+	margin-right:10px;
+}
+.listpostitle{
+	font-weight:bold;
+	font-size:3.5vw;
+	display:block;
+}
+.listfacilityname{
+	margin-top:5px;
+	display:block;
+	text-align:right;
+	color: #ccc;
+	font-size:3vw;
+}
+.listaddress{
+	display:block;
+	text-align:right;
+	margin-bottom:5px;
+	font-size:3vw;
+}
+.listaddress a{
+	text-decoration:underline;
+	font-weight:bold;
+	color:#1C998F;
+	
+}
+.listprice{
+	padding-top:3px;
+	display:inline-block;
+	font-weight:900;
+	font-size:1.0rem;
+	letter-spacing:0.1rem;
+	font-family: "Quicksand","游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	font-style:oblique;
+	margin-left:20px;
+	
+}
+.notax{
+	font-size:80%;
+}
+
+.list .posticon{
+	display:inline-block;
+	float:left;
+	padding-top:6px;
+	
+}
+.listmore{
+	position:absolute;
+	bottom:0;
+	margin-top:5px;
+	line-height:25px;
+	width:100%;
+	display:block;
+	font-weight:bold;
+	font-size:90%;
+}
+.fa-angle-double-right{
+	padding-right:5px;
+}
+.listmore a{
+	display:none;
+	
+	margin-top:20%;
+	box-sizing:border-box;
+	width:100%;
+	background:#FF4355;
+	color:#FFF;
+	    transition: all 0.2s linear 0s;
+		padding:7px 10px;
+		border-radius: 5px;
+		text-align:center;
+		font-size:3.8vw;
+}
+.listmore a:hover{
+	text-decoration:underline;
+	
+}
+.listmore .fa-angle-double-right{
+	color:#FFF;
+}
+.listnavi{
+	display:block;
+	padding: 0 10px;
+}
+.listnavi a{
+	color:#1C998F;
+	text-decoration:underline;
+}
+.listnavi .listcount{
+	display:block;
+}
+.listcalendar{
+	display:block;
+	margin-bottom:5px;
+	overflow:hidden;
+}
+.listcalendar ul{
+	padding:0;
+}
+.listcalendar ul li:first-child{
+	padding:5px 1px;
+}
+.listcalendar ul li{
+	background:#f1f1f1;
+	float:left;
+	width:14.28%;
+	box-sizing:border-box;
+	font-size:2vw;
+	text-align:center;
+	overflow:hidden;
+	padding:5px 1px;
+	border-right:1px solid #ccc;
+	border-top:1px solid #ccc;
+	font-weight:bold;
+	border-bottom:1px solid #ccc;
+}
+.listcalendar ul li:first-child{
+	border-left:1px solid #ccc;
+}
+.listcalendar ul li:last-child{
+	width:14.28%;
+}
+
+/* 店舗詳細ページ */
+.listin{
+	overflow:hidden;
+	padding:0 0 40px 0;
+
+}
+.listin h2{
+	font-size:4.5vw;
+}
+.listin h2 .okiniiri{
+	margin-top:10px;
+	display:block;
+	font-size:0.7rem;
+	background:#f1f1f1;
+	border-radius: 4px;
+    box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.08) inset;
+    text-align: center;
+	padding:10px;
+}
+.sns{
+	display:block;
+	float:right;
+	margin-bottom:10px;
+	padding:0 10px;
+	box-sizing:border-box;
+}
+
+.listinimg ul li{
+	width:100%;
+}
+/* ------------------------------
+   タブ
+------------------------------ */
+.tabAccordion {
+    margin: 0 auto;
+    width:100%;
+	
+	overflow:hidden;
+    position: relative;
+}
+.tabAccordion .fa{
+	display:block;
+	font-size:5vw;
+	margin-bottom:3px;
+}
+.tabAccordion a .fa{
+	color:#222222;
+	 -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.tabAccordion a:hover .fa{
+	color:#fff;
+}
+.tabAccordion dl {
+    top: 0;
+    left: 0;
+    width: 600px;
+  
+}
+ 
+.tabAccordion dl dt {
+	z-index:2;
+    top: 0;
+    left: 0;
+    width: 150px;
+    font-weight: bold;
+    position: absolute;
+    border-right: #fff 1px solid;
+    background: #E8F5F4;
+    box-sizing: border-box;
+	color:#FFF;
+	border-top:3px solid #1E9A8F;
+}
+ 
+.tabAccordion dl:nth-child(2) dt {
+    left: 150px;
+}
+ 
+.tabAccordion dl:nth-child(3) dt {
+    left: 300px;
+}
+ 
+.tabAccordion dl:nth-child(4) dt {
+    left: 450px;
+}
+.tabAccordion dl:nth-child(5) dt {
+    left: 450px;
+    border-right: none;
+}
+.tabAccordion dl dt a {
+    padding:15% 0;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    -moz-transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+	font-size:2vw;
+}
+ 
+.tabAccordion dl dt.btnAcv {
+	color:#333;
+    border-bottom: none;
+    background: #fff;
+	
+	box-sizing:border-box;
+	
+}
+ 
+
+    .tabAccordion dl dt:hover > a {
+        background: #1E9A8F;
+		color:#fff;
+    }
+
+ 
+.tabAccordion dl dd {
+    padding: 15.5% 0px;
+    width: 100%;
+    text-align: left;
+	overflow:hidden;
+    display: none;
+    box-sizing: border-box;
+}
+ 
+.tabAccordion dl dd p {
+	
+	box-sizing:border-box;
+   
+}
+ 
+
+    .tabAccordion {
+        width: 100%;
+        box-sizing: border-box;
+    }
+ 
+    .tabAccordion dl {
+        width: 100%;
+        box-sizing: border-box;
+    }
+ 
+    .tabAccordion dl dt {
+        width: 20%;
+    }
+ 
+    .tabAccordion dl:nth-child(2) dt {
+        left: 20%;
+    }
+ 
+    .tabAccordion dl:nth-child(3) dt {
+        left: 40%;
+    }
+ 
+    .tabAccordion dl:nth-child(4) dt {
+        left: 60%;
+    }
+.tabAccordion dl:nth-child(5) dt {
+        left: 80%;
+    }
+
+.tabAccordion h3{
+	padding: 12px 15px;
+	background-color: #f1f1f1;
+	border-left: 6px solid #1e9a8f;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+.tabAccordion .st{
+	display:block;
+	font-weight:bold;
+	
+	margin-top:10px;
+	padding:0 10px;
+}
+.tabAccordion p{
+	padding:10px 10px;
+	box-sizing:border-box;
+	
+}
+
+.slider {
+	margin-top: 20px;
+    width:100%;
+    height:200px;
+    overflow: hidden;   /*追加*/
+}
+.slider img{
+	width:100%;
+}
+
+.reservation{
+	width:100%;
+	overflow:hidden;
+	box-sizing:border-box;
+}
+.reservationbtn a{
+	display:block;
+	width:100%;
+	font-size:1.0rem;
+	font-weight:bold;
+	background:#FF4355;
+	border-radius: 4px;
+    box-shadow: 0 -3px 0 0 rgba(0, 0, 0, 0.08) inset;
+    text-align: center;
+	padding:10px;
+	box-sizing:border-box;
+	color:#FFF;
+}
+.reservationbtn a .fa{
+	color:#FFF;
+	display:inline-block;
+}
+.reservationbtn a:hover{
+	opacity:0.8;
+	text-decoration:none;
+}
+.listinprice{
+	display:inline-block;
+	font-weight:bold;
+	font-size:1.5rem;
+	letter-spacing:0.1rem;
+	font-family: "Quicksand","游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴシック Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+	font-style:oblique;
+	margin-left:5px;
+	color:#FF4355;
+}
+.reservation table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.reservation th {
+	text-align:left;
+    padding: 0 0 20px 0;
+    width: 30%;
+}
+.reservation td {
+    padding: 0 0 20px 0;
+    text-align: left;
+}
+
+.map{
+	padding:0 10px;
+	box-sizing:border-box;
+}
+/* ------------------------------
+   フォト＆動画
+------------------------------ */
+.gallery{
+	width:100%;
+}
+.mosaicflow__column {
+  float:left;
+   width:50%;
+  
+}
+.mosaicflow__item {
+  position:relative;
+ 
+}
+.mosaicflow__item img {
+  display:block;
+  width:100%;
+  
+  height:auto;
+}
+
+.mosaicflow__item p {
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  margin:0;
+  padding:10px;
+  background:hsla(0,0%,0%,.5);
+  color:#fff;
+  opacity:0;
+  box-sizing:border-box;
+  font-size:10px;
+}
+.mosaicflow__item:hover p {
+  opacity:1;
+}
+
+/* ------------------------------
+   口コミ
+------------------------------ */
+.reviews{
+	overflow:hidden;
+	
+}
+.reviews ul li{
+	float:left;
+	width:
+	
+}
+
 }
