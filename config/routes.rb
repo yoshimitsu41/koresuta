@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get 'stores/:id' => 'stores#show'
   root "activities#index"
   resources :activities
+  resources :areas
 end
