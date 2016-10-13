@@ -1,11 +1,23 @@
 <h2>アクティビティ新規作成</h2>
 
+<style>
+.form_test ul li{
+  margin-bottom: 20px;
+}
+</style>
+
+<div class="form_test">
 <%= form_for @activity do |f| %>
-  <%= f.text_field :title, placeholder: "タイトル" %>
-  <%= f.text_area :description, placeholder: "説明文"  %>
-  <%= f.number_field :price, placeholder: "料金" %>
+  <ul>
+    <li><%= f.text_field :title, placeholder: "タイトル" %></li>
+    <li><%= f.text_area :description, placeholder: "説明文"  %></li>
+    <li><%= f.number_field :price, placeholder: "料金" %></li>
+    <li><%= f.collection_select :prefectural, Prefectural.all, :id, :name %></li>
       <%= f.fields_for :activity_images do |image| %>
-        <%= image.file_field :image %>
+        <li><%= image.file_field :image %></li>
       <% end %>
+  </ul>
   <%= f.submit '登録' %>
 <% end %>
+</div><!-- .form_test -->
+
