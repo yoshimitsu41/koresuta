@@ -27,7 +27,7 @@ class ActivitiesController < ApplicationController
 
   private
   def activity_params
-    params.require(:activity).permit(:title,:description,:price,activity_images_attributes: [:image])
+    params.require(:activity).permit(:title,:description,:price,:prefectural, activity_images_attributes: [:image])
   end
 
   def activityimage_params
