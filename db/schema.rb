@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161012103941) do
+ActiveRecord::Schema.define(version: 20161012112200) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -27,6 +27,19 @@ ActiveRecord::Schema.define(version: 20161012103941) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.integer  "activity_id", limit: 4
+  end
+
+  create_table "areas", force: :cascade do |t|
+    t.string  "postal_code",    limit: 255,              null: false
+    t.integer "prefectural_id", limit: 4
+    t.string  "city",           limit: 255, default: ""
+    t.string  "street",         limit: 255, default: ""
+  end
+
+  add_index "areas", ["prefectural_id"], name: "index_areas_on_prefectural_id", using: :btree
+
+  create_table "prefecturals", force: :cascade do |t|
+    t.string "name", limit: 255
   end
 
   create_table "stores", force: :cascade do |t|
