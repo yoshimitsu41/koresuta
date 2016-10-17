@@ -11,18 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161013061920) do
+ActiveRecord::Schema.define(version: 20161017114747) do
 
   create_table "activities", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.text     "description", limit: 65535
-    t.integer  "price",       limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.integer  "store_id",    limit: 4
-    t.string   "prefectural", limit: 255
-    t.string   "city",        limit: 255
-    t.string   "street",      limit: 255
+    t.string   "title",          limit: 255
+    t.text     "description",    limit: 65535
+    t.integer  "price",          limit: 4
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "store_id",       limit: 4
+    t.string   "city",           limit: 255
+    t.string   "street",         limit: 255
+    t.integer  "prefectural_id", limit: 4
   end
 
   create_table "activity_images", force: :cascade do |t|
@@ -32,14 +32,11 @@ ActiveRecord::Schema.define(version: 20161013061920) do
     t.integer  "activity_id", limit: 4
   end
 
-  create_table "areas", force: :cascade do |t|
-    t.string  "postal_code",    limit: 255,              null: false
+  create_table "areas", id: false, force: :cascade do |t|
+    t.integer "id",             limit: 4,   default: 0,  null: false
     t.integer "prefectural_id", limit: 4
     t.string  "city",           limit: 255, default: ""
-    t.string  "street",         limit: 255, default: ""
   end
-
-  add_index "areas", ["prefectural_id"], name: "index_areas_on_prefectural_id", using: :btree
 
   create_table "prefecturals", force: :cascade do |t|
     t.string "name", limit: 255

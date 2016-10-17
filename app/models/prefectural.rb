@@ -1,3 +1,3 @@
 class Prefectural < ActiveRecord::Base
-  has_many :areas
+  has_many :activities
 end

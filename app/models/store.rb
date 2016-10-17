@@ -4,5 +4,6 @@ class Store < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  belongs_to :activities
+  has_many :activities
 end
+
