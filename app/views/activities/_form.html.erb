@@ -13,6 +13,7 @@
     <li><%= f.text_area :description, placeholder: "説明文"  %></li>
     <li><%= f.number_field :price, placeholder: "料金" %></li>
     <li><%= f.collection_select :prefectural_id, Prefectural.all, :id, :name %></li>
+    <li><%= f.text_field :street, placeholder: "町名番地" %></li>
       <%= f.fields_for :activity_images do |image| %>
         <li><%= image.file_field :image %></li>
       <% end %>

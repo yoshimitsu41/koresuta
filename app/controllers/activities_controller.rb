@@ -14,7 +14,6 @@ class ActivitiesController < ApplicationController
 
   def create
     Activity.create(activity_params)
-    binding.pry
   end
 
   def edit
@@ -28,7 +27,7 @@ class ActivitiesController < ApplicationController
 
   private
   def activity_params
-    params.require(:activity).permit(:title,:description,:price,:prefectural_id,activity_images_attributes: [:image]).merge(store_id: current_store.id)
+    params.require(:activity).permit(:title,:description,:price,:prefectural_id,:street,activity_images_attributes: [:image]).merge(store_id: current_store.id)
   end
 
   def activityimage_params
