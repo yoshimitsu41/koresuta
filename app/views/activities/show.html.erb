@@ -1,7 +1,92 @@
-<h2>アクティビティ詳細</h2>
+<div class="listin">
+<h2><%= @activity.title %><span class="okiniiri"><i class="fa fa-heart"></i>お気に入りに追加する</span></h2>
 
-<%= @activity.title %><br/>
-<%= @activity.description %><br/>
-<%= @activity.price %>円<br/>
+<%= render 'sns' %>
+<%= render 'plantop' %>
+<%= render 'plandetail' %>
+<%= render 'map' %>
+<%= render 'photo' %>
+<%= render 'review' %>
 
-<%= link_to '一覧へ戻る', activities_path %>
+<script>
+$(function(){
+    var rwdTab = $('.tabAccordion'),
+    switchPoint = 640,
+    fadeSpeed = 150,
+    slideSpeed = 150;
+ 
+    var btnElm = rwdTab.children('dl').children('dt'),
+    contentsArea = rwdTab.children('dl').children('dd');
+ 
+    btnElm.on('click', function(){
+        if(!$(this).hasClass('btnAcv')){
+            btnElm.removeClass('btnAcv');
+            $(this).addClass('btnAcv');
+ 
+            if(window.innerWidth > switchPoint){
+                contentsArea.fadeOut(fadeSpeed);
+                $(this).next().fadeIn(fadeSpeed);
+            } else {
+                contentsArea.slideUp(slideSpeed);
+                $(this).next().slideDown(slideSpeed);
+            }
+        }
+    });
+ 
+    btnElm.first().click();
+});
+</script>
+
+<!-- /右予約のとこ -->
+<div class="reservation">
+<table>
+<tbody>
+<tr>
+<th>料金（税込）</th>
+<td><span class="listinprice">\15,000～</span></td>
+</tr>
+<tr>
+<th>対象年齢</th>
+<td>13歳以上
+※20歳未満の方は保護者の同伴または同意が必要です。</td>
+</tr>
+<tr>
+<th>開催期間</th>
+<td>4月～11月</td>
+</tr>
+<tr>
+<th>予約</th>
+<td>1日前まえの10:00まで</td>
+</tr>
+</tbody>
+</table>
+
+<div class="reservationbtn"><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i>
+予約・空き確認する</a></div>
+
+<div class="listincalendar">
+<div class="month">10月</div>
+<ul>
+<li>7/22(金)<br />○</li>
+<li class="blu">7/23(土)<br />○</li>
+<li class="pink">7/24(日)<br />○</li>
+<li>7/25(月)<br />△</li>
+<li>7/26(火)<br />○</li>
+<li>7/27(水)<br />×</li>
+<li>7/28(木)<br />○</li>
+</ul>
+<p>
+<i class="fa fa-circle-thin" aria-hidden="true"></i> <i class="fa fa-ellipsis-h" aria-hidden="true"></i> 空きあり<br>
+<i class="fa fa-commenting-o" aria-hidden="true"></i> <i class="fa fa-ellipsis-h" aria-hidden="true"></i> お申込の後運営会社より可否のご連絡<br>
+<i class="fa fa-exclamation-triangle" aria-hidden="true"></i> <i class="fa fa-ellipsis-h" aria-hidden="true"></i> 残り少し<br>
+<i class="fa fa-times" aria-hidden="true"></i>  <i class="fa fa-ellipsis-h" aria-hidden="true"></i> 受付終了<br>
+空欄 <i class="fa fa-ellipsis-h" aria-hidden="true"></i> 開催外<br>
+</p>
+</div><!-- /.listincalendar -->
+
+</div><!-- /.reservation -->
+
+
+</div><!-- /.tabAccordion -->
+
+</div><!-- /.listin -->

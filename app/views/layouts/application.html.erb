@@ -166,6 +166,16 @@ $('.bxslider').bxSlider({
 
 <!-- / ヘッダー -->
 
+<% unless controller.controller_name == "activities" && controller.action_name == "index" %>
+
+<!-- パンくず -->
+<div class="pankuzu">
+<div class="inner">
+<a href="">コレスタ</a><i class="fa fa-angle-right" aria-hidden="true"></i><a href="">バンジージャンプ</a><i class="fa fa-angle-right" aria-hidden="true"></i>HOA北海道アウトドアアドベンチャーズ
+</div>
+</div>
+<% end %>
+
 <!-- メインコンテンツ -->
 <div id="container">
 <% if current_page?(root_path) %>
