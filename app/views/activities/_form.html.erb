@@ -11,6 +11,9 @@
   <ul>
     <li><%= f.text_field :title, placeholder: "タイトル" %></li>
     <li><%= f.text_area :description, placeholder: "説明文"  %></li>
+    <li><%= f.text_area :age, placeholder: "対象年齢"  %></li>
+    <li><%= f.text_area :period, placeholder: "開催期間"  %></li>
+    <li><%= f.text_area :reservation, placeholder: "予約"  %></li>
     <li><%= f.number_field :price, placeholder: "料金" %></li>
     <li><%= f.collection_select :prefectural_id, Prefectural.all, :id, :name %></li>
     <li><%= f.text_field :street, placeholder: "町名番地" %></li>

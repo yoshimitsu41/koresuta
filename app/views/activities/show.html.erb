@@ -43,20 +43,19 @@ $(function(){
 <tbody>
 <tr>
 <th>料金（税込）</th>
-<td><span class="listinprice">\15,000～</span></td>
+<td><span class="listinprice">¥<%= @activity.price %></span></td>
 </tr>
 <tr>
 <th>対象年齢</th>
-<td>13歳以上
-※20歳未満の方は保護者の同伴または同意が必要です。</td>
+<td><%= @activity.age %></td>
 </tr>
 <tr>
 <th>開催期間</th>
-<td>4月～11月</td>
+<td><%= @activity.period %></td>
 </tr>
 <tr>
 <th>予約</th>
-<td>1日前まえの10:00まで</td>
+<td><%= @activity.reservation %></td>
 </tr>
 </tbody>
 </table>
