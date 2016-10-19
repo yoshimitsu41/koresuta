@@ -1,15 +1,16 @@
-<h2>店舗様ログイン</h2>
-
+<div class="container">
+<div class="form-wrapper">
+<%= image_tag("logo.png", :class => "form_logo") %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+  <form>
+    <div class="form-item">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+    <div class="form-item">
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
@@ -18,9 +19,16 @@
     </div>
   <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="button-panel">
+      <%= f.submit "Log in" %>
+    </div>
+  </form>
+  <div class="form-footer">
+    <p><a href="#">Create an account</a></p>
+    <p><a href="#">Forgot password?</a></p>
   </div>
 <% end %>
 
 <%= render "stores/shared/links" %>
+</div>
+</div>

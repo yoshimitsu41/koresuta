@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
   # end
 
+  layout :layout_by_resource
+
   protected
 
     def devise_parameter_sanitizer
@@ -19,4 +21,13 @@ class ApplicationController < ActionController::Base
         super # Use the default one
       end
     end
+
+  def layout_by_resource
+    if devise_controller?
+      "store"
+    else
+      "application"
+    end
+  end
+
 end
