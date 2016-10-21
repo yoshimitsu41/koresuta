@@ -1,6 +1,8 @@
 <div class="container">
 <div class="form-wrapper">
-<%= image_tag("logo.png", :class => "form_logo") %>
+<%= link_to image_tag("logo.png", class: "form_logo"), root_path %>
+
+<h2>店舗様ログイン</h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <form>
     <div class="form-item">

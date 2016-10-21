@@ -100,3 +100,7 @@ form {
 	padding:20px;
 	margin-left:20%;
 }
+
+.form-wrapper h2{
+  text-align: center;
+}
