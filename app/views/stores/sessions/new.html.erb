@@ -20,15 +20,12 @@
   <% end -%>
 
     <div class="button-panel">
-      <%= f.submit "Log in" %>
+      <%= f.submit "ログイン", class: "button" %>
     </div>
   </form>
   <div class="form-footer">
-    <p><a href="#">Create an account</a></p>
-    <p><a href="#">Forgot password?</a></p>
+    <%= render "stores/shared/links" %>
   </div>
 <% end %>
-
-<%= render "stores/shared/links" %>
 </div>
 </div>
