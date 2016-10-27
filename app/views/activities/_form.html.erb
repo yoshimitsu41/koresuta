@@ -24,3 +24,19 @@
   <%= f.submit '登録' %>
 <% end %>
 </div><!-- .form_test -->
+
+<style type="text/css" media="screen">
+.kakushi{
+  visibility: hidden;
+}
+</style>
+
+<p class="kakushi">めちゃめちゃでたよ</p>
+
+<script>
+  $(function(){
+    $('#activity_prefectural_id').change(function(){
+      $('p').removeClass('kakushi');
+  });
+});
+</script>
