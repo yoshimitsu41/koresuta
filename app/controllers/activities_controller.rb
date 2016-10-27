@@ -13,6 +13,12 @@ class ActivitiesController < ApplicationController
     @activity.activity_images.build
   end
 
+  def activity_area
+    if request.xhr?
+      render partial: 'areas', locals: {prefectural_id: params[:prefectural_id]}
+    end
+  end
+
   def create
     Activity.create(activity_params)
   end
@@ -28,7 +34,7 @@ class ActivitiesController < ApplicationController
 
   private
   def activity_params
-    params.require(:activity).permit(:title,:description,:price,:prefectural_id,:age,:period,:reservation,:street,activity_images_attributes: [:image]).merge(store_id: current_store.id)
+    params.require(:activity).permit(:title,:description,:price,:prefectural_id,:area_id,:age,:period,:reservation,:street,activity_images_attributes: [:image]).merge(store_id: current_store.id)
   end
 
   def activityimage_params

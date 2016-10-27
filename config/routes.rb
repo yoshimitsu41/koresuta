@@ -4,5 +4,9 @@ Rails.application.routes.draw do
   get 'users/:id' => 'users#show'
   get 'stores/:id' => 'stores#show'
   root "activities#index"
-  resources :activities
+  resources :activities do
+    collection do
+      get :activity_area
+    end
+  end
 end
