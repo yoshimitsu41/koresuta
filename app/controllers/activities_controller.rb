@@ -13,7 +13,7 @@ class ActivitiesController < ApplicationController
     @activity.activity_images.build
   end
 
-  def activity_area
+  def activity_area_id
     if request.xhr?
       render partial: 'areas', locals: {prefectural_id: params[:prefectural_id]}
     end

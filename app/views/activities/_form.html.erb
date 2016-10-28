@@ -15,7 +15,7 @@
     <li><%= f.text_area :period, placeholder: "開催期間"  %></li>
     <li><%= f.text_area :reservation, placeholder: "予約"  %></li>
     <li><%= f.number_field :price, placeholder: "料金" %></li>
-    <li><%= f.collection_select :prefectural, Prefectural.all, :id, :name %></li>
+    <li><%= f.collection_select :prefectural_id, Prefectural.all, :id, :name %></li>
     <%= render partial: 'areas', locals: {prefectural_id: Prefectural.first.id} %>
 
     <li><%= f.text_field :street, placeholder: "町名番地" %></li>
@@ -26,19 +26,3 @@
   <%= f.submit '登録' %>
 <% end %>
 </div><!-- .form_test -->
-
-<style type="text/css" media="screen">
-.kakushi{
-  visibility: hidden;
-}
-</style>
-
-<p class="kakushi">めちゃめちゃでたよ</p>
-
-<script>
-  $(function(){
-    $('#activity_prefectural_id').change(function(){
-      $('p').removeClass('kakushi');
-  });
-});
-</script>

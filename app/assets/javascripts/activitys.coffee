@@ -2,12 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).on 'change', '#activity_prefectural', ->
+$(document).on 'change', '#activity_prefectural_id', ->
   $.ajax(
     type: 'GET'
-    url: '/activities/activity_area'
+    url: '/activities/activity_area_id'
     data: {
       prefectural_id: $(this).val()
     }
   ).done (data) ->
-    $('#activity_area').html(data)
+    $('#activity_area_id').html(data)

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root "activities#index"
   resources :activities do
     collection do
-      get :activity_area
+      get :activity_area_id
     end
   end
 end
